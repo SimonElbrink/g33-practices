@@ -1,5 +1,7 @@
 package se.lexicon.practice.section4.model;
 
+import se.lexicon.MyUtils;
+
 import java.time.LocalDate;
 import java.util.Arrays;
 
@@ -11,6 +13,7 @@ public class SystemDeveloper extends Employee {
     private String[] certificates;
     private String[] programmingLanguages;
 
+    //Constructor
     public SystemDeveloper(String name, LocalDate dateHired, String[] certificates, String[] programmingLanguages) {
         super(name, dateHired);
         this.certificates = certificates;
@@ -58,8 +61,6 @@ public class SystemDeveloper extends Employee {
 
         //Calculate new Salary
         calculateSalary();
-
-
     }
 
     public String[] getProgrammingLanguages() {
@@ -74,21 +75,9 @@ public class SystemDeveloper extends Employee {
 
     public void addProgrammingLanguage(String language){
 
-        String[] newArray = addToArray(programmingLanguages, language);
+        String[] newArray = MyUtils.addToArray(programmingLanguages, language);
 
         setProgrammingLanguages(newArray);
-
-    }
-
-    private String[] addToArray(String[] source, String value){
-
-        //Copy and expand array
-        String[] newArray = Arrays.copyOf(source,source.length +1);
-
-        //Add Element in the array.
-        newArray[newArray.length -1] = value;
-
-        return newArray;
 
     }
 

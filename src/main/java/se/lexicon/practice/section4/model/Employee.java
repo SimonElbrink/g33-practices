@@ -9,7 +9,7 @@ public abstract class Employee {
     protected static final int BASE_SALARY = 25_000;
 
     //Fields
-    private int id;
+    private final int id;
     private String name;
     private double salary;
     private LocalDate dateHired;
@@ -22,7 +22,14 @@ public abstract class Employee {
         this.salary = BASE_SALARY;
     }
 
-    //Custom methods
+    protected Employee(int id, String name, LocalDate dateHired) {
+        this.id = id;
+        this.name = name;
+        this.dateHired = dateHired;
+        this.salary = BASE_SALARY;
+    }
+
+//Custom methods
 
     public abstract void calculateSalary();
 

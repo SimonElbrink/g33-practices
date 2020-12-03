@@ -3,7 +3,6 @@ package se.lexicon.practice.section4.model;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import se.lexicon.practice.section4.model.SystemDeveloper;
 import se.lexicon.practice.section4.sequencer.EmployeeSequencer;
 
 import java.time.LocalDate;
